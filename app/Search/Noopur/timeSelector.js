@@ -110,8 +110,8 @@ export const TimeSelector = ({
                     <Modal
                         okButtonProps={{ className: "hidden" }}
                         cancelButtonProps={{ className: "hidden" }}
-                        width={"50%"}
                         title=" "
+                        className="w-[90dvw] sm:min-w-[70dvw]"
                         centered
                         open={open}
                         onOk={handleOk}
