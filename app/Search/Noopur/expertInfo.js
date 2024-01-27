@@ -21,7 +21,7 @@ export const ExpertInfo = ({ classname }) => {
     ];
 
     return (
-        <div className="flex flex-col items-center w-full min-w-min px-24 gap-14 flex-1">
+        <div className="flex flex-col items-center w-full min-w-min md:px-24 gap-14 flex-1">
             <div className="w-full flex flex-col gap-5 relative">
                 <div className="items-center flex gap-5 self-center">
                     <Image
@@ -29,7 +29,7 @@ export const ExpertInfo = ({ classname }) => {
                         alt=""
                         width={750}
                         height={500}
-                        className="h-auto rounded-2xl"
+                        className="sm:max-lg:max-w-[60dvh] h-auto rounded-2xl"
                     />
                 </div>
                 <div className="text-2xl  text-primary">

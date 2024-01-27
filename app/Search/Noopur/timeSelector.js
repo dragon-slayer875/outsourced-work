@@ -36,7 +36,7 @@ export const TimeSelector = ({
     const schedule = timingData[selectedDuration];
 
     return (
-        <div className="flex flex-col items-center flex-1 px-24 overflow-auto">
+        <div className="flex flex-col items-center flex-1 md:px-24 overflow-auto">
             <div className="flex flex-col w-full">
                 <div className="text-xl font-semibold">Book A session</div>
                 <div className="flex gap-5">
