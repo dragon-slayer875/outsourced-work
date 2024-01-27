@@ -15,7 +15,7 @@ const Navbar = ({ logo, navItemList = ["Dashboard", "Experts"], children }) => {
             <div className="flex items-center justify-between">
                 {/* nav items */}
                 {navItemList.map((item, index) => (
-                    <button key={index} className="font-semibold p-4">
+                    <button key={index} className="font-medium p-4">
                         {item}
                     </button>
                 ))}

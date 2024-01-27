@@ -1,5 +1,5 @@
 "use client";
-import CustomInput from "./CustomInput";
+import CustomInput from "./customInput";
 import { FiEdit } from "react-icons/fi";
 import { useState } from "react";
 

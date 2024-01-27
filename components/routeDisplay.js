@@ -6,7 +6,7 @@ export const RouteDisplay = () => {
     const pathname = usePathname();
 
     return (
-        <div className="bg-white text-slate-900 text-md w-full px-20 py-2">
+        <div className="bg-white text-slate-900 text-md w-full px-20 py-8 font-medium">
             <span key={0}>
                 <button className="underline">Home</button>
             </span>

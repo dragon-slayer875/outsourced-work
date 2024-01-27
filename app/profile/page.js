@@ -1,4 +1,4 @@
-import EditableTextField from "@/components/editableTextField";
+import EditableTextField from "@/app/profile/editableTextField";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

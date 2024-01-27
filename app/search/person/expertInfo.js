@@ -24,67 +24,65 @@ export const ExpertInfo = ({ classname }) => {
     ];
 
     return (
-        <div className="flex flex-col items-center w-full px-6 gap-6 overflow-y-scroll flex-1">
+        <div className="flex flex-col items-center w-full px-40 gap-12 overflow-y-scroll flex-1">
             <div className="w-full flex flex-col gap-5 relative">
                 <div className="items-center flex gap-5 self-center">
                     <Image
                         src=""
                         alt=""
-                        width={500}
+                        width={550}
                         height={500}
-                        className=" w-72 aspect-square"
+                        className="h-auto aspect-[4/3] rounded-2xl"
                     />
                 </div>
-                <div className="text-2xl font-semibold ml-1 text-blue-500">
-                    Name
+                <div className="text-2xl ml-1 text-primary">
+                    Noopur Gupta
                 </div>
                 <div className="flex justify-start basis-0">
                     <Divider
                         type="vertical"
-                        className="m-0 mr-2 bg-black h-full"
+                        className="m-0 mr-2 bg-neutral h-full"
                     />
-                    <div className="text-xl font-semibold">Position</div>
+                    <div className="text-xl">Position</div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-3">
                     <button className="flex gap-5 items-center">
-                        <CiLinkedin className="text-2xl text-blue-500" />
-                        <div className="text-xl font-semibold">LinkedIn</div>
+                        <CiLinkedin className="text-2xl text-primary" />
+                        <div className="text-xl text-blackish font-normal">LinkedIn</div>
                     </button>
                     <button className="flex gap-5 items-center">
-                        <CiLocationOn className="text-2xl text-blue-500" />
-                        <div className="text-xl font-semibold">Location</div>
+                        <CiLocationOn className="text-2xl text-primary" />
+                        <div className="text-xl text-blackish font-normal">Location</div>
                     </button>
                     <button className="flex gap-5 items-center">
-                        <GiGlobe className="text-2xl text-blue-500" />
-                        <div className="text-xl font-semibold">Languages</div>
+                        <GiGlobe className="text-2xl text-primary" />
+                        <div className="text-xl text-blackish font-normal">Languages</div>
                     </button>
-                    <button className="absolute right-0 bottom-0 flex gap-5 items-center">
-                        <CiShare2 className="text-2xl text-blue-500" />
-                        <div className="text-xl text-blue-500 font-semibold underline">
-                            Share
+                    <button className="absolute right-0 bottom-0 flex gap-2 items-center">
+                        <CiShare2 className="text-2xl text-primary" />
+                        <div className="text-xl text-primary underline">
+                            Share Profile
                         </div>
                     </button>
                 </div>
             </div>
-            <div className="w-full border-2 border-slate-300 rounded-lg p-5">
-                <div className="text-2xl text-blue-500">I can help you in:</div>
-                <div className="text-xl">
+            <div className="w-full border-2 border-greyish rounded-2xl p-7 text-xl flex flex-col gap-4">
+                <div className="text-primary">I can help you in:</div>
                     {textArray.map((text, index) => (
-                        <div className="" key={index}>
-                            <FaCheck className="inline-block mr-2 text-blue-500" />
-                            {text}
+                        <div className="flex items-center" key={index}>
+                            <FaCheck className="inline-block mx-4 text-primary" size={"22px"} />
+                            <div>{text}</div>
                         </div>
                     ))}
-                </div>
             </div>
-            <div className="w-full border-2 border-slate-300 rounded-lg p-5 flex flex-col gap-6">
-                <div className="text-2xl text-blue-500">Bio:</div>
+            <div className="w-full border-2 border-greyish rounded-2xl p-7 flex flex-col gap-4">
+                <div className="text-2xl text-primary">Bio:</div>
                 <div className="text-xl">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
                 <div className="flex gap-2 flex-wrap">
                 {badgeArray.map((badge, index) => (
-                    <div className="text-md text-center border border-black px-2 rounded-full" key={index}>
+                    <div className="text-md text-center font-normal border border-neutral text-blackish px-3 rounded-2xl" key={index}>
                         {badge}
                     </div>
                 ))}
