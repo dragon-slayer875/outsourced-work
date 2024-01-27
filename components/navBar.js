@@ -4,16 +4,16 @@ import Image from "next/image";
 const Navbar = ({ navItemList = ["Dashboard", "Experts"] }) => {
     return (
         <nav className="sticky flex items-center justify-between w-full px-20 py-2 bg-whitish text-slate-900">
-            <div className="">
+            <div className="min-w-max">
                 <Image
                     width={200}
                     height={20}
                     src="/founderHub.png"
                     alt="logo"
-                    className="object-contain w-full aspect-auto h-auto"
+                    className="object-contain min-w-full aspect-auto h-auto"
                 />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="hidden lg:flex items-center justify-between">
                 {/* nav items */}
                 {navItemList.map((item, index) => (
                     <button key={index} className="font-medium text-xl p-4">
