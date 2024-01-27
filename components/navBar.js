@@ -1,21 +1,22 @@
 import React, { Children } from "react";
 import Image from "next/image";
 
-const Navbar = ({ logo, navItemList = ["Dashboard", "Experts"], children }) => {
+const Navbar = ({ navItemList = ["Dashboard", "Experts"], children }) => {
     return (
         <nav className="sticky flex items-center justify-between w-full px-20 py-2 bg-[#F9F9FB] text-slate-900">
             <div className="">
-                {/* logo */}
-                {logo ? (
-                    <Image width={20} height={20} src={logo} alt="logo" />
-                ) : (
-                    <h1>Logo</h1>
-                )}
+                <Image
+                    width={200}
+                    height={20}
+                    src="/founderHub.png"
+                    alt="logo"
+                    className="object-contain w-full aspect-auto h-auto"
+                />
             </div>
             <div className="flex items-center justify-between">
                 {/* nav items */}
                 {navItemList.map((item, index) => (
-                    <button key={index} className="font-medium p-4">
+                    <button key={index} className="font-medium text-[20px] p-4">
                         {item}
                     </button>
                 ))}

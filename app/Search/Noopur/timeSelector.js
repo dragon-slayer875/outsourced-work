@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import timingData from "@/public/timing.json";
+import timingData from "@/public/times.json";
 import { Divider } from "antd";
 import { MdNavigateNext } from "react-icons/md";
-import { Modal, Button } from "antd";
+import { Modal } from "antd";
 
 export const TimeSelector = ({
     personTimings = ["30 min", "60 min"],
@@ -36,7 +36,7 @@ export const TimeSelector = ({
     const schedule = timingData[selectedDuration];
 
     return (
-        <div className="flex flex-col items-center flex-1 px-24">
+        <div className="flex flex-col items-center flex-1 px-24 overflow-auto">
             <div className="flex flex-col w-full">
                 <div className="text-xl font-semibold">Book A session</div>
                 <div className="flex gap-5">
@@ -54,7 +54,7 @@ export const TimeSelector = ({
                         </button>
                     ))}
                 </div>
-                <div className="flex flex-col gap-5 max-h-[50dvh] pr-5 mt-5 overflow-y-scroll scrollbar-thin scrollbar-thumb-primary scrollbar-track-transparent text-neutral">
+                <div className="flex flex-col gap-7 pr-5 mt-5 h-[50vh] overflow-y-scroll text-neutral custom-scrollbar">
                     {!schedule && (
                         <div className="text-xl font-semibold min-h-full">
                             No slots available
@@ -62,10 +62,10 @@ export const TimeSelector = ({
                     )}
                     {schedule &&
                         schedule.map((day, index) => (
-                            <div key={index} className="flex flex-col gap-5">
+                            <div key={index} className="flex flex-col">
                                 <div>
                                     <div>{Object.keys(day)}</div>
-                                    <div className="flex gap-5">
+                                    <div className="flex flex-wrap gap-5">
                                         {Object.values(day).map((times) =>
                                             times.map((time, index) => (
                                                 <button
@@ -73,7 +73,7 @@ export const TimeSelector = ({
                                                         setSelectedTime(time)
                                                     }
                                                     key={index}
-                                                    className={`border-2 rounded-xl border-neutral px-5 py-7 my-2 ${
+                                                    className={`border-2 rounded-xl border-neutral px-5 py-7 my-0 ${
                                                         selectedTime === time
                                                             ? " !border-primary text-primary"
                                                             : null
@@ -93,8 +93,10 @@ export const TimeSelector = ({
                 <Divider className="w-full bg-blackish" />
                 <div className="flex justify-between items-center">
                     <div>
-                        <span className="text-xl text-blackish">{"$4500"}</span>
-                        <span>{`/${selectedDuration}`}</span>
+                        <span className="text-xl font-medium text-blackish">
+                            {"$4500"}
+                        </span>
+                        <span className="text-neutralish">{`/${selectedDuration}`}</span>
                     </div>
                     <button
                         onClick={showModal}
