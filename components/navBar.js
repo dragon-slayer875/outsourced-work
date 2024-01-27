@@ -35,7 +35,7 @@ const Navbar = ({ navItemList = ["Dashboard", "Experts"] }) => {
                     height={22}
                     className=""
                 />
-                <div className="flex items-center justify-between gap-3 bg-white border-[#E0E2E3] rounded-lg px-2">
+                <div className="flex items-center justify-between gap-3 bg-white border border-[#E0E2E3] rounded-lg p-2">
                     <Image
                         src={"/ellipse.png"}
                         width={22}

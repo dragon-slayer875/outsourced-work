@@ -54,7 +54,7 @@ export const TimeSelector = ({
                         </button>
                     ))}
                 </div>
-                <div className="flex flex-col gap-7 pr-5 mt-5 h-[50vh] overflow-y-scroll text-neutral custom-scrollbar">
+                <div className="flex flex-col gap-7 pr-5 mt-5 max-h-[40vh] overflow-y-scroll text-neutral custom-scrollbar">
                     {!schedule && (
                         <div className="text-xl font-semibold min-h-full">
                             No slots available
@@ -73,7 +73,7 @@ export const TimeSelector = ({
                                                         setSelectedTime(time)
                                                     }
                                                     key={index}
-                                                    className={`border-2 rounded-xl border-neutral px-5 py-7 my-0 ${
+                                                    className={`border-2 rounded-xl border-neutral px-3 py-5 my-0 ${
                                                         selectedTime === time
                                                             ? " !border-primary text-primary"
                                                             : null
