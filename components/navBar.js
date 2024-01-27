@@ -1,9 +1,9 @@
-import React, { Children } from "react";
+import React from "react";
 import Image from "next/image";
 
-const Navbar = ({ navItemList = ["Dashboard", "Experts"], children }) => {
+const Navbar = ({ navItemList = ["Dashboard", "Experts"] }) => {
     return (
-        <nav className="sticky flex items-center justify-between w-full px-20 py-2 bg-[#F9F9FB] text-slate-900">
+        <nav className="sticky flex items-center justify-between w-full px-20 py-2 bg-whitish text-slate-900">
             <div className="">
                 <Image
                     width={200}
@@ -16,14 +16,40 @@ const Navbar = ({ navItemList = ["Dashboard", "Experts"], children }) => {
             <div className="flex items-center justify-between">
                 {/* nav items */}
                 {navItemList.map((item, index) => (
-                    <button key={index} className="font-medium text-[20px] p-4">
+                    <button key={index} className="font-medium text-xl p-4">
                         {item}
                     </button>
                 ))}
             </div>
-            <div className="">
+            <div className="flex gap-5">
                 {/* user options*/}
-                {children}
+                <Image
+                    src={"/question.svg"}
+                    width={22}
+                    height={22}
+                    className=""
+                />
+                <Image
+                    src={"/notification.svg"}
+                    width={22}
+                    height={22}
+                    className=""
+                />
+                <div className="flex items-center justify-between gap-3 bg-white border-[#E0E2E3] rounded-lg px-2">
+                    <Image
+                        src={"/ellipse.png"}
+                        width={22}
+                        height={22}
+                        className="object-contain w-8 h-auto aspect-square"
+                    />
+                        <span>John Doe</span>
+                        <Image
+                            src={"/downArrow.svg"}
+                            width={12}
+                            height={7}
+                            className=""
+                        />
+                </div>
             </div>
         </nav>
     );

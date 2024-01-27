@@ -65,7 +65,7 @@ export const ExpertInfo = ({ classname }) => {
                     </div>
                 </div>
             </div>
-            <div className="w-full border-2 border-greyish rounded-2xl p-7 items-center text-md flex flex-col">
+            <div className="w-full border-2 border-greyish rounded-2xl py-6 px-8 items-center text-md flex flex-col">
                 <div className="flex flex-col gap-4 max-w-max ">
                 <div className="text-primary">I can help you in:</div>
                     {textArray.map((text, index) => (
@@ -76,7 +76,7 @@ export const ExpertInfo = ({ classname }) => {
                     ))}
                     </div>
             </div>
-            <div className="w-full border-2 border-greyish text-md rounded-2xl p-7 items-center flex flex-col">
+            <div className="w-full border-2 border-greyish text-md rounded-2xl py-6 px-8 items-center flex flex-col">
                 <div className="flex flex-col gap-5 max-w-max">
                 <div className="text-primary">Bio:</div>
                 <div className="">
