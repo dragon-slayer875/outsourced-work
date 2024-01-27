@@ -24,13 +24,13 @@ export const ExpertInfo = ({ classname }) => {
     ];
 
     return (
-        <div className="flex flex-col items-center w-full px-40 gap-12 overflow-y-scroll flex-1">
+        <div className="flex flex-col items-center max-h-[70dvh] w-full min-w-min px-24 gap-12 overflow-y-scroll scrollbar-thin scrollbar-thumb-primary scrollbar-track-transparent flex-1">
             <div className="w-full flex flex-col gap-5 relative">
                 <div className="items-center flex gap-5 self-center">
                     <Image
                         src=""
                         alt=""
-                        width={550}
+                        width={750}
                         height={500}
                         className="h-auto aspect-[4/3] rounded-2xl"
                     />
@@ -58,7 +58,7 @@ export const ExpertInfo = ({ classname }) => {
                         <GiGlobe className="text-2xl text-primary" />
                         <div className="text-xl text-blackish font-normal">Languages</div>
                     </button>
-                    <button className="absolute right-0 bottom-0 flex gap-2 items-center">
+                    <button className="absolute right-0 bottom-0 ml-5 flex gap-2 items-center">
                         <CiShare2 className="text-2xl text-primary" />
                         <div className="text-xl text-primary underline">
                             Share Profile
@@ -66,7 +66,8 @@ export const ExpertInfo = ({ classname }) => {
                     </button>
                 </div>
             </div>
-            <div className="w-full border-2 border-greyish rounded-2xl p-7 text-xl flex flex-col gap-4">
+            <div className="w-full border-2 border-greyish rounded-2xl p-7 items-center text-xl flex flex-col">
+                <div className="flex flex-col gap-4 max-w-max ">
                 <div className="text-primary">I can help you in:</div>
                     {textArray.map((text, index) => (
                         <div className="flex items-center" key={index}>
@@ -74,8 +75,10 @@ export const ExpertInfo = ({ classname }) => {
                             <div>{text}</div>
                         </div>
                     ))}
+                    </div>
             </div>
-            <div className="w-full border-2 border-greyish rounded-2xl p-7 flex flex-col gap-4">
+            <div className="w-full border-2 border-greyish rounded-2xl p-7 items-center flex flex-col">
+                <div className="flex flex-col gap-4 max-w-max">
                 <div className="text-2xl text-primary">Bio:</div>
                 <div className="text-xl">
                     lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -86,6 +89,7 @@ export const ExpertInfo = ({ classname }) => {
                         {badge}
                     </div>
                 ))}
+                </div>
                 </div>
             </div>
         </div>
